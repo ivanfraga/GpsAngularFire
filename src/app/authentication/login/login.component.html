@@ -1,0 +1,31 @@
+<div class="top row aling-items-center justify-content-center">
+    <div class="col-sm-6">
+<div class="card card_title">
+<div class="card-head"><h2>Iniciar Sesión</h2></div>
+<div class="card-body">
+    En este apartado el usuario puede iniciar sesión ingresando con su correo y contraseña previamente registrados. 
+</div>
+</div>
+<br>
+<form [formGroup]="userForm" (ngSubmit)="login()" novalidate>
+<div class="mb-3">
+    <label class="form-label"><b>Correo</b> </label>
+    <input formControlName="mail" type="email" class="form-control" required>
+    <label class="error"  *ngIf="emptyemail" >{{emptyFields("mail")}}</label>
+
+</div>
+<div class="mb-3">
+    <label class="form-label"><b>Contraseña</b> </label>
+    <input formControlName="password" type="password" class="form-control" required>
+    <label class="error"  *ngIf="emptyPassword" >{{emptyFields("password")}}</label>
+
+</div>
+
+<button routerLink="/register" class="btn btn-primary button" type="button">Registrarse</button>
+
+<button [disabled]="!userForm.valid" type="submit" class="btn btn-primary button" >Iniciar sesión</button>
+    
+
+</form>
+</div>
+</div>

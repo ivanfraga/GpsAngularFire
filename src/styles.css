@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+.card{
+    margin-top: 30px;
+    padding: 15px;
+}
+.card_title{
+    margin-top: 0px;
+    padding: 15px;
+}
+.centrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardProfile{
+    margin-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.error{
+    color: red;
+ }
+ .red{
+    border-color: red; 
+ }
+ .button{   
+    margin: 15px;
+}
+.top{
+    padding-top: 100px;
+}
+body {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/appweb-bcd38.appspot.com/o/imagenLugaresTuristicos%2Fwallpaper%2Fwall.jpg?alt=media&token=9fde93c4-81bd-4cd1-a8c1-c8be8ab7eb8c");
+  }
+table{
+    background-color: white;
+}

@@ -1,0 +1,29 @@
+<div class="top row aling-items-center justify-content-center">
+    <div class="col-sm-6">
+<div class="card card_title">
+    <div class="card-head"><h2>Ubicación de Usuarios</h2></div>
+    <div class="card-body">
+        En este apartado se presentan las ubicaciones de los miembros del equipo de ciclismo. 
+    </div>
+</div>
+<div class="d-grid gap-2 button">
+    <button (click)="logout()" class="d-grid gap-2 button btn btn-primary" >Cerrar Sesión</button>
+</div>
+<table class="table table-hover table-striped" style="white-space: nowrap; overflow-x: auto;">
+    <thead class="bg-dark text-white">
+        <tr>
+            <th>Nombre</th>
+            <th>Ubicación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of Users">
+            <td>{{user.name}}</td>
+            <td>
+                <a class="btn btn-primary" target="_blank" href="https://www.google.es/maps?q={{user.lati}},{{user.long}}">Ir a ubicación</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>

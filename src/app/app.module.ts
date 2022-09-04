@@ -12,13 +12,17 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { LoginComponent } from './authentication/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { RegisterComponent } from './authentication/register/register/register.component';
+import { ForgotpasswordComponent } from './authentication/forgotpassword/forgotpassword.component';
+import { VerificationComponent } from './authentication/verification/verification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    RegisterComponent
+    RegisterComponent,
+    ForgotpasswordComponent,
+    VerificationComponent
   ],
   imports: [
     BrowserModule,

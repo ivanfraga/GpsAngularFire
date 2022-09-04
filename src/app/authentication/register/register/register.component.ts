@@ -68,6 +68,7 @@ export class RegisterComponent implements OnInit {
          //this.auth.createGeo();
          this.myAsyncFunction(); 
       })
+      this.auth.sendEmailForVarification(res.user);
       //redireccionar a la vista principal
     }
   }
@@ -81,7 +82,7 @@ export class RegisterComponent implements OnInit {
     console.log("por fa espera")
 
     await this.delay(2);
-    this.router.navigate(['/dashboard'])
+    
   }
   redirect(){
     this.router.navigate(['/login']);

@@ -44,7 +44,7 @@ export class AuthserviceService {
     
     console.log("user value: ", user)
     //método de firebase para registrarse en el sistema mediante el correo y contraseña
-    return this.fireauth.createUserWithEmailAndPassword(user.mail, user.password)
+    return this.fireauth.createUserWithEmailAndPassword(user.mail, user.password);
   }
   //Función para crear usuario en firestore
   //Necesita parámetros: objeto usuario, dirección de la colección
@@ -146,4 +146,13 @@ export class AuthserviceService {
     return this.firestore.collection(path)
     .snapshotChanges();//obtiene los documentos
   }
+  sendEmailForVarification(user : any) {
+    console.log(user);
+    user.sendEmailVerification().then((res : any) => {
+      this.router.navigate(['/verify']);
+    }, (err : any) => {
+      alert('Something went wrong. Not able to send mail to your email.')
+    })
+  }
+
 }

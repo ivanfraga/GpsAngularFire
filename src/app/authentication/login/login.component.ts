@@ -57,8 +57,13 @@ export class LoginComponent implements OnInit {
          console.log("Datos usuario: ",
          localStorage.getItem("idUser"),
          )
-         this.router.navigate(['/dashboard'])
+         //this.router.navigate(['/dashboard'])
         })
+        if(res.user?.emailVerified == true) {
+          this.router.navigate(['dashboard']);
+        } else {
+          this.router.navigate(['/verify']);
+        }
       }
   }
   emptyFields(field: string){
